@@ -1,11 +1,15 @@
 
-set NewFontsDir=C:\Workspace\Fonts\Windows\
+set NewFontsDir=C:\Workspaces\Fonts\Windows\
 
 set SysFontsDir=C:\Windows\Fonts\
 
 del %SysFontsDir%arial.ttf
 del %SysFontsDir%ariblk.ttf
 del %SysFontsDir%ariali.ttf
+del %SysFontsDir%arialn.TTF
+del %SysFontsDir%arialnb.TTF
+del %SysFontsDir%arialnbi.TTF
+del %SysFontsDir%arialni.TTF
 del %SysFontsDir%bahnschrift.ttf
 del %SysFontsDir%BIZ-UDGothicR.ttc
 del %SysFontsDir%BIZ-UDGothicB.ttc
@@ -47,6 +51,8 @@ del %SysFontsDir%couri.ttf
 del %SysFontsDir%Deng.ttf
 del %SysFontsDir%Dengb.ttf
 del %SysFontsDir%Dengl.ttf
+del %SysFontsDir%DejaVuSans.ttf
+del %SysFontsDir%DejaVuSansMono-BoldOblique.ttf
 del %SysFontsDir%ebrima.ttf
 del %SysFontsDir%ebrimabd.ttf
 del %SysFontsDir%simfang.ttf
@@ -64,12 +70,15 @@ del %SysFontsDir%simkai.ttf
 del %SysFontsDir%leelawui.ttf
 del %SysFontsDir%leelauib.ttf
 del %SysFontsDir%leeluisl.ttf
+del %SysFontsDir%LiberationSansNarrow-Regular.ttf
+del %SysFontsDir%LiberationSerif-Italic.ttf
 del %SysFontsDir%lucon.TTF
 del %SysFontsDir%l_10646.ttf
 del %SysFontsDir%malgun.ttf
 del %SysFontsDir%malgunsl.ttf
 del %SysFontsDir%meiryo.ttc
 del %SysFontsDir%himalaya.ttf
+del %SysFontsDir%MiriamMonoCLM-Bold.ttf
 del %SysFontsDir%msjh.ttc
 del %SysFontsDir%msjhl.ttc
 del %SysFontsDir%ntailu.ttf
@@ -92,10 +101,19 @@ del %SysFontsDir%mmrtextb.ttf
 del %SysFontsDir%Nirmala.ttf
 del %SysFontsDir%NirmalaB.ttf
 del %SysFontsDir%NirmalaS.ttf
+del %SysFontsDir%NotoSansJP-VF.ttf
+del %SysFontsDir%NotoSerifJP-VF.ttf
+del %SysFontsDir%NotoSerifHebrew-Bold.ttf
+del %SysFontsDir%NotoSansSC-VF.ttf
+del %SysFontsDir%NotoSerifSC-VF.ttf
+del %SysFontsDir%NotoSerifLao-Bold.ttf
+del %SysFontsDir%OUTLOOK.TTF
 del %SysFontsDir%pala.ttf
 del %SysFontsDir%palab.ttf
 del %SysFontsDir%palabi.ttf
 del %SysFontsDir%palai.ttf
+del %SysFontsDir%refsan.ttf
+del %SysFontsDir%REFSPCL.TTF
 del %SysFontsDir%SansSerifCollection.ttf
 del %SysFontsDir%segoepr.ttf
 del %SysFontsDir%segoeprb.ttf
@@ -105,6 +123,7 @@ del %SysFontsDir%seguihis.ttf
 del %SysFontsDir%SegUIVar.ttf
 del %SysFontsDir%simhei.ttf
 del %SysFontsDir%simsunb.ttf
+del %SysFontsDir%SimsunExtG.ttf
 del %SysFontsDir%SitkaVF.ttf
 del %SysFontsDir%SitkaVF-Italic.ttf
 del %SysFontsDir%sylfaen.ttf

@@ -10,10 +10,6 @@ set BinDir=C:\Scripts\
 
 set SysFontsDir=C:\Windows\Fonts\
 
-del /q %BackupFontsDir%*.*
-
-copy /y %SysFontsDir%*.* %BackupFontsDir%
-
 takeown /f %SysFontsDir%*.ttf
 
 takeown /f %SysFontsDir%*.ttc
