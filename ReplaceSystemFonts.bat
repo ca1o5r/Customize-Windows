@@ -1,154 +1,59 @@
+@echo off
+REM --- 设置源目录和日志文件路径 ---
+set "SourceDir=C:\Workspaces\Fonts\Windows"
+set "TargetDir=C:\Windows\Fonts"
 
-set NewFontsDir=C:\Workspaces\Fonts\Windows\
+REM !!! 日志文件是排错的关键，请务必设置一个可访问的路径 !!!
+set "LogFile=C:\Workspaces\Fonts\font_replace_log.txt"
 
-set SysFontsDir=C:\Windows\Fonts\
 
-del %SysFontsDir%arial.ttf
-del %SysFontsDir%ariblk.ttf
-del %SysFontsDir%ariali.ttf
-del %SysFontsDir%arialn.TTF
-del %SysFontsDir%arialnb.TTF
-del %SysFontsDir%arialnbi.TTF
-del %SysFontsDir%arialni.TTF
-del %SysFontsDir%bahnschrift.ttf
-del %SysFontsDir%BIZ-UDGothicR.ttc
-del %SysFontsDir%BIZ-UDGothicB.ttc
-del %SysFontsDir%BIZ-UDMinchoM.ttc
-del %SysFontsDir%calibri.ttf
-del %SysFontsDir%calibrib.ttf
-del %SysFontsDir%calibriz.ttf
-del %SysFontsDir%calibrii.ttf
-del %SysFontsDir%calibril.ttf
-del %SysFontsDir%calibrili.ttf
-del %SysFontsDir%cambria.ttc
-del %SysFontsDir%cambriab.ttf
-del %SysFontsDir%cambriaz.ttf
-del %SysFontsDir%cambriai.ttf
-del %SysFontsDir%candara.ttf
-del %SysFontsDir%candarab.ttf
-del %SysFontsDir%candaraz.ttf
-del %SysFontsDir%candarai.ttf
-del %SysFontsDir%candaral.ttf
-del %SysFontsDir%candarali.ttf
-del %SysFontsDir%comic.ttf
-del %SysFontsDir%comicbd.ttf
-del %SysFontsDir%comicz.ttf
-del %SysFontsDir%comici.ttf
-del %SysFontsDir%consola.ttf
-del %SysFontsDir%consolai.ttf
-del %SysFontsDir%constan.ttf
-del %SysFontsDir%constanb.ttf
-del %SysFontsDir%constanz.ttf
-del %SysFontsDir%constani.ttf
-del %SysFontsDir%corbel.ttf
-del %SysFontsDir%corbelb.ttf
-del %SysFontsDir%corbelz.ttf
-del %SysFontsDir%corbeli.ttf
-del %SysFontsDir%corbell.ttf
-del %SysFontsDir%corbelli.ttf
-del %SysFontsDir%cour.ttf
-del %SysFontsDir%couri.ttf
-del %SysFontsDir%Deng.ttf
-del %SysFontsDir%Dengb.ttf
-del %SysFontsDir%Dengl.ttf
-del %SysFontsDir%DejaVuSans.ttf
-del %SysFontsDir%DejaVuSansMono-BoldOblique.ttf
-del %SysFontsDir%ebrima.ttf
-del %SysFontsDir%ebrimabd.ttf
-del %SysFontsDir%simfang.ttf
-del %SysFontsDir%framd.ttf
-del %SysFontsDir%framdit.ttf
-del %SysFontsDir%gadugi.ttf
-del %SysFontsDir%gadugib.ttf
-del %SysFontsDir%Gabriola.ttf
-del %SysFontsDir%georgia.ttf
-del %SysFontsDir%georgiai.ttf
-del %SysFontsDir%impact.ttf
-del %SysFontsDir%Inkfree.ttf
-del %SysFontsDir%javatext.ttf
-del %SysFontsDir%simkai.ttf
-del %SysFontsDir%leelawui.ttf
-del %SysFontsDir%leelauib.ttf
-del %SysFontsDir%leeluisl.ttf
-del %SysFontsDir%LiberationSansNarrow-Regular.ttf
-del %SysFontsDir%LiberationSerif-Italic.ttf
-del %SysFontsDir%lucon.TTF
-del %SysFontsDir%l_10646.ttf
-del %SysFontsDir%malgun.ttf
-del %SysFontsDir%malgunsl.ttf
-del %SysFontsDir%meiryo.ttc
-del %SysFontsDir%himalaya.ttf
-del %SysFontsDir%MiriamMonoCLM-Bold.ttf
-del %SysFontsDir%msjh.ttc
-del %SysFontsDir%msjhl.ttc
-del %SysFontsDir%ntailu.ttf
-del %SysFontsDir%ntailub.ttf
-del %SysFontsDir%phagspa.ttf
-del %SysFontsDir%phagspab.ttf
-del %SysFontsDir%micross.ttf
-del %SysFontsDir%taile.ttf
-del %SysFontsDir%taileb.ttf
-del %SysFontsDir%msyh.ttc
-del %SysFontsDir%msyhl.ttc
-del %SysFontsDir%msyi.ttf
-del %SysFontsDir%mingliub.ttc
-del %SysFontsDir%monbaiti.ttf
-del %SysFontsDir%msgothic.ttc
-del %SysFontsDir%msmincho.ttc
-del %SysFontsDir%mvboli.ttf
-del %SysFontsDir%mmrtext.ttf
-del %SysFontsDir%mmrtextb.ttf
-del %SysFontsDir%Nirmala.ttf
-del %SysFontsDir%NirmalaB.ttf
-del %SysFontsDir%NirmalaS.ttf
-del %SysFontsDir%NotoSansJP-VF.ttf
-del %SysFontsDir%NotoSerifJP-VF.ttf
-del %SysFontsDir%NotoSerifHebrew-Bold.ttf
-del %SysFontsDir%NotoSansSC-VF.ttf
-del %SysFontsDir%NotoSerifSC-VF.ttf
-del %SysFontsDir%NotoSerifLao-Bold.ttf
-del %SysFontsDir%OUTLOOK.TTF
-del %SysFontsDir%pala.ttf
-del %SysFontsDir%palab.ttf
-del %SysFontsDir%palabi.ttf
-del %SysFontsDir%palai.ttf
-del %SysFontsDir%refsan.ttf
-del %SysFontsDir%REFSPCL.TTF
-del %SysFontsDir%SansSerifCollection.ttf
-del %SysFontsDir%segoepr.ttf
-del %SysFontsDir%segoeprb.ttf
-del %SysFontsDir%segoesc.ttf
-del %SysFontsDir%segoescb.ttf
-del %SysFontsDir%seguihis.ttf
-del %SysFontsDir%SegUIVar.ttf
-del %SysFontsDir%simhei.ttf
-del %SysFontsDir%simsunb.ttf
-del %SysFontsDir%SimsunExtG.ttf
-del %SysFontsDir%SitkaVF.ttf
-del %SysFontsDir%SitkaVF-Italic.ttf
-del %SysFontsDir%sylfaen.ttf
-del %SysFontsDir%tahoma.ttf
-del %SysFontsDir%times.ttf
-del %SysFontsDir%timesi.ttf
-del %SysFontsDir%trebuc.ttf
-del %SysFontsDir%trebucbd.ttf
-del %SysFontsDir%trebucbi.ttf
-del %SysFontsDir%trebucit.ttf
-del %SysFontsDir%UDDigiKyokashoN-B.ttc
-del %SysFontsDir%UDDigiKyokashoN-R.ttc
-del %SysFontsDir%YuGothB.ttc
-del %SysFontsDir%YuGothL.ttc
-del %SysFontsDir%YuGothM.ttc
-del %SysFontsDir%YuGothR.ttc
-del %SysFontsDir%yumin.ttf
-del %SysFontsDir%yumindb.ttf
-del %SysFontsDir%yuminl.ttf
-del %SysFontsDir%verdana.ttf
-del %SysFontsDir%verdanab.ttf
-del %SysFontsDir%verdanaz.ttf
-del %SysFontsDir%verdanai.ttf
-del %SysFontsDir%Nirmala.ttc
+REM --- 记录任务开始信息 ---
+echo ================================================= > "%LogFile%"
+echo  任务启动于: %date% %time% >> "%LogFile%"
+echo  源目录: %SourceDir% >> "%LogFile%"
+echo ================================================= >> "%LogFile%"
+echo. >> "%LogFile%"
 
-copy /y %NewFontsDir%*.ttf %SysFontsDir%
 
-copy /y %NewFontsDir%*.ttc %SysFontsDir%
+REM --- 检查源目录是否存在 ---
+if not exist "%SourceDir%" (
+    echo [FATAL ERROR] 源目录 "%SourceDir%" 不存在! 脚本终止。 >> "%LogFile%"
+    exit /b 1
+)
+
+
+REM --- 核心操作：使用 XCOPY 强制覆盖所有字体文件 ---
+REM /Y - 覆盖时不提示
+REM /R - 覆盖只读文件
+REM /H - 复制隐藏和系统文件
+REM /C - 即使出错也继续复制
+REM /E - 复制所有子目录（即使是空的）
+REM 2>&1 - 将所有标准输出和错误输出都重定向到日志文件
+
+del /q C:\Windows\Fonts\timesi.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\times.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\SimsunExtG.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\simsunb.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\simkai.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\simhei.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\simfang.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\mmrtextb.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\mmrtext.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\calibri*.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\ariali.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\arial.ttf >> "%LogFile%" 2>&1
+del /q C:\Windows\Fonts\YuGoth*.ttc >> "%LogFile%" 2>&1
+
+
+echo 正在尝试覆盖 .ttf 和 .ttc 文件... >> "%LogFile%"
+xcopy "%SourceDir%\*.*tf" "%TargetDir%\" /Y /R /H /C /E >> "%LogFile%" 2>&1
+xcopy "%SourceDir%\*.*tc" "%TargetDir%\" /Y /R /H /C /E >> "%LogFile%" 2>&1
+
+
+REM --- 记录任务结束信息 ---
+echo. >> "%LogFile%"
+echo ================================================= >> "%LogFile%"
+echo  任务执行完毕于: %date% %time% >> "%LogFile%"
+echo ================================================= >> "%LogFile%"
+
+exit /b 0
